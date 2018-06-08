@@ -49,9 +49,13 @@ public class Main {
 // 3- Make the change on the selected nodes
                 for (int idx = 0; idx < nodes.getLength(); idx++) {
                     Node value = nodes.item(idx).getAttributes().getNamedItem("android:layout_width");
-                    value.setNodeValue("1dp");
+                    if(value!=null) {
+                        value.setNodeValue("1dp");
+                    }
                     Node value2 = nodes.item(idx).getAttributes().getNamedItem("android:layout_height");
-                    value2.setNodeValue("1dp");
+                    if(value2!=null) {
+                        value2.setNodeValue("1dp");
+                    }
                 }
 //erase the old file
                 fle.delete();
